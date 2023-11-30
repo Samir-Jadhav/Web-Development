@@ -1,0 +1,95 @@
+<!-- Nested Lists
+Send Feedback
+You want to make a webpage about yourself where you can list your favorite things. To make it look interesting, you plan to use different lists with different styles.
+
+Expected Output:
+
+
+
+
+
+TEST CASES:
+
+1- The heading should be styled as expected below:-
+a. Unique Main Heading Tag should be present with the "h1" tag.
+b. Use specified tags to make the Heading underlined and italic. 
+c. One Horizontal Ruler should be present after the heading. 
+
+
+2- The unordered lists should be present as expected below:-
+a. Ensure that the whole first parent unordered list should be enclosed within the "ul" tag.  
+b. The first parent list should have a "square" type. 
+c. Ensure that unordered lists should have two nested "li" tags. For Example My favorite books and My favorite writers.  
+d. The first nested "li" tag should have a "disc" list type, like "My Favorite books" items should have a disc type of list items.
+e. The second nested "li" list should have the "circle" list type, like "My Favorite writers" items should have a circle type of list items.
+f. Each unordered List, enclosed within two "li" tags that are nested inside the first parent unordered list, should contain 1 or more list items with "li" tags. 
+
+
+3- The ordered lists are present as expected:-
+a. Ensure that the whole second parent list should be an "ol" tag. 
+b. The second parent-ordered list should have the "Roman number" list type.
+c. Ensure that the ordered list should have two nested "li" tags. For Example, My favorite subjects and Online courses I wish to explore. 
+d. The first nested ordered list should have the "alphabetical" list type, like "My favorite subjects" should have the "a, b, c" type of list items. 
+e. The second nested ordered list should have the "numeric" list type starting from 4, like "Online courses I wish to explore" should have "4 , 5, 6" type of list items. 
+f. Each ordered List, enclosed within two "li" tags which are nested inside the second parent ordered list, should contain 1 or more list items with "li" tags. 
+
+
+Notes:
+1- You can modify the content inside the list as per your wish
+2- Do follow the structure of the expected output as given in the question with proper usage of tags.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1 style="text-align:center">
+      <b>
+        <i><u>My Name is Ganesh</u></i></b>
+    </h1>
+    <hr>
+  </head>
+  
+  <body>    
+    <!-- Write your code here -->
+    <ul type="square">
+    <li>
+      <h2><b>My favorite books</b></h2>
+      <ul type="disc">
+      <li>Harry Potter</li>
+      <li>The God of small Things</li>
+      <li>The Prophet</li>
+      </ul>
+      <li>
+      <h2><b>My favorite writers</b></h2>
+      <ul type="circle">
+
+        <li>JK Rowling</li>
+        <li>Arundhati Roy</li>
+        <li>Kahlil Gibran</li>
+      </ul>
+      </ul>
+    </ul>
+
+    <ol type="I">
+      <li>
+    <h2><b>My Favorite subjects</b></h2>
+    <ol type="a">
+      <li>Data Structure and Algorithm</li>
+      <li>Operating System</li>
+      <li>DBMS</li>
+
+    </ol>
+      <li>
+    <h2><b>Onine coursed I wish to explore</b></h2>
+    <ol type="1" start="4">
+      <li>Frontend using HTML, CSS, JS</li>
+      <li>Frontend using React.js</li>
+      <li>Backend using Node.js</li>
+    </ol>
+  </li>
+ 
+  </ol>
+</body>
+</html>
