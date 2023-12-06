@@ -25,3 +25,9 @@ p {
 .h-style{
     color: darkslategrey;
 }
+.color-red{
+    color: red;
+}
+#color-blue{
+    color: blue;
+}
