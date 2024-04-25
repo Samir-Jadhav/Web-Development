@@ -97,6 +97,9 @@ section:nth-child(2n+1){
     margin-right: 0.5rem;
 
 }
+.section-heading-contact span{
+    color: white;
+}
 .mb75px{
     margin-bottom: 75px;
 }
@@ -249,4 +252,11 @@ section:nth-child(2n+1){
 .portfolio-image-container:hover .portfolio-details {
     background-color: #80808078;
     color: white;
+}
+
+/* Contact section */
+.contact-container{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(90deg, #2857a4, #403066);
 }
