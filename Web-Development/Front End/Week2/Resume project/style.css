@@ -258,5 +258,120 @@ section:nth-child(2n+1){
 .contact-container{
     width: 100%;
     height: auto;
-    background-image: linear-gradient(90deg, #2857a4, #403066);
+    background-image: linear-gradient(60deg, #2857a4, #403066 80%);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+.contact-div{
+    height: 500px;
+    width: 75%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+.div1{
+    /* border: 2px solid black; */
+    height: 350px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+
+}
+
+
+.div1 input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 550px;
+    flex-wrap: wrap;
+    background: transparent;
+    outline: none;
+    border:none;
+    font-size: 15px;
+    /* border: 2px solid black; */
+    vertical-align: text-bottom;
+
+    /* border-bottom: 2px solid white; */
+}
+
+.input-border{
+    border-bottom: 2px solid white;
+}
+.button{
+    height: 40px;
+    width:150px;
+    font-size: 1rem;
+        align-items: center;
+    margin-top: 15%;
+    /* background-color:white; Green */
+  border: none;
+  color: white;
+  background-color:transparent; 
+  color:white; 
+  border: 2px solid white;
+}
+
+.button-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    background-color: #80808078;
+    color: white;
+    transition: all 0.2s ease-out;
+    
+}
+
+.div2{
+    height: 350px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* border: 2px solid black; */
+
+}
+.div-head{
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+
+}
+.para-style{
+    font-size: 0.8rem;
+    color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+
+}
+
+.contact-details{
+    font-size: 0.9rem;
+    color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+.contact-details div{
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    /* margin-left: 5px; */
+}
+.social-icons-bottom li a i{
+    margin: 20px;
+    font-size: 1.2rem;
+    /* border: 2px solid black; */
+
 }
