@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text-styled::first-line{
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+
+        }
+        #text-style::first-letter{
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+
+        }
+        #text-before::before{
+            content: 'after';
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+
+        }
+        #text-after::after{
+            content: 'before';
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+
+        }
+        a:active{
+            color: green;
+            background-color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p id="text-style">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, alias?
+        </p>
+        <p id="text-styled">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, alias?
+        </p>
+        <p id="text-before">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, alias?
+        </p>
+        <p id="text-after">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, alias?
+        </p>
+        <a href="#"><span>Google.com</span></a>
+    </div>
+</body>
+</html>
