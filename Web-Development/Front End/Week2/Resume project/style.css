@@ -11,6 +11,90 @@ body{
     background-attachment: fixed;
     padding-top: 1.2rem;
 }
+#checkbtn{
+
+    float: right;
+    line-height:65px;
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.sidebar{
+    position: fixed;
+    top:60px;
+    right: 30px;
+    height: auto;
+    width: 150px;
+    margin: 5px;
+    z-index: 999;
+    background-color: grey;
+    display: none;
+    flex-direction: column;
+    box-shadow:1px 1px 4px 1px grey;
+    
+    /* border: 2px solid red; */
+    /* justify-content: center;
+    align-items: center; */
+    /* display: none; */
+}
+
+/* .sidebar li{
+    margin: 5px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a{
+    width: 100%;
+} */
+
+
+@media  screen and (max-width: 572px) {
+#body-header .nav-menu li{
+    display: none;
+
+
+}
+.sidebar ul li{
+    margin:8px;
+    display: block;
+}
+
+#checkbtn{
+    display: block;
+}
+#check:checked ~ .sidebar{
+    display: block;
+    transition: all 15s ease-out;
+}
+#checkbtn a:hover .sidebar{
+    color: red !important;
+    /* display: block; */
+}
+
+}
+/* #body-header ul{
+    width: 25%;
+    height: 35%;
+    background-color: darkgray;
+
+
+}
+*/
+/* #body-header ul li{
+    display: block;
+    
+} */ 
+
+
+
 /* Horizontal lists */
 .horizontal-list{
     list-style: none;
@@ -69,6 +153,7 @@ body{
 section{
     width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
@@ -206,7 +291,128 @@ section:nth-child(2n+1){
     margin-left: 10px;
     vertical-align: middle;
 }
+/* Work Experience */
 
+.timeline{
+    position: relative;
+    width: 75%;
+    /* border: 2px solid black; */
+}
+
+.timeline-box{
+    position: relative;
+    margin: 5px;
+    width: 40%;
+    left: 2%;
+    min-height: 200px;
+    /* border: 2px solid black; */
+
+}
+.timeline-box:nth-child(2n){
+    left: 54%;
+
+}
+
+.timeline-divider{
+    position: absolute;
+    height: 75%;
+    width: 0%;
+    left: 50%;
+    border: 2px solid lightgray;
+    top: 9%;
+    bottom: 5%;
+
+}
+.timeline-traveller{
+    top: 20%;
+    position: sticky;
+    transform: rotate(90deg);
+    z-index: 2;
+    font-size: 30px;
+    
+}
+.timeline-box:nth-child(2n+1):after{
+    content:'' ;
+    position:absolute;
+    top: 34%;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    right: -21%;
+    background-color: lightgray;
+    z-index: 1;
+}
+.timeline-box:nth-child(2n):after{
+    content:'' ;
+    position:absolute;
+    top: 34%;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    left: -12%;
+    background-color: lightgray;
+    z-index: 1;
+}
+.timeline-heading{
+    background-image: url(static/Asset2.png);
+    font-size: 1.5rem;
+    color: hsl(217, 61%, 40%);
+    bottom: 5%;
+    text-align: right;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.timeline-subheading{
+    font-size: 1rem;
+    color: orangered;
+    bottom: 3px;
+    text-align: right;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.timeline-miniheading{
+    text-align: right;
+    color: gray;
+}
+.timeline p{
+    color: gray;
+    text-align: justify;
+}
+.timeline-box::before{
+    text-align: left;
+    content: '';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    /* border: 2px solid red; */
+
+    background-image: url(static/CNlogo.webp);
+}
+
+@media  screen and (max-width:500px) {
+    .timeline-divider{
+        left:6%;
+    }
+    .timeline-box{
+        left: 10% !important;
+        width: 80%;
+    }
+    /* .timeline-box:nth-child(2n){
+        left: 10%;
+    
+    } */
+    .timeline-box:nth-child(2n+1):after{
+        left: -9%;
+    }
+    .timeline-box:nth-child(2n):after{
+        left: -9%;
+
+    }
+    html{
+        font-size: large15px;
+    }
+}
 /* Portfolio */
 
 .portfolio-container{
@@ -260,12 +466,12 @@ section:nth-child(2n+1){
     height: auto;
     background-image: linear-gradient(60deg, #2857a4, #403066 80%);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-size: 10px;
 }
 
 .contact-div{
-    height: 500px;
+    height: Auto;
     width: 75%;
     /* border: 2px solid black; */
     display: flex;
@@ -336,7 +542,7 @@ section:nth-child(2n+1){
     width: 600px;
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* border: 2px solid black; */
 
 }
