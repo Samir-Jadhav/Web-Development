@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-in</title>
+    <style>
+        
+        div{
+            height: 80px;
+            width: 300px;
+            position: relative;
+            top: 200px;
+            left: 500px;
+            font-size: 30px;
+            color: black;
+            padding-top: 30px;
+            border: 1px solid black;
+            background-color: white;
+            text-align: center;
+            
+            animation: fade-in 2s linear infinite;
+
+
+
+        }
+        @keyframes fade-in{
+
+            0%{
+
+                opacity: 0;
+            }
+           
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Animation Fade-in</span>
+
+    </div>
+    
+</body>
+</html>
