@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeShape</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            position: relative;
+            top: 200px;
+            left: 500px;
+            background-color: cyan;
+            animation: changeShape 1s ease-in-out infinite alternate;
+
+
+
+        }
+        @keyframes changeShape{
+
+            0%{
+
+                border-radius: 0%;
+            }
+           
+            100%{
+                border-radius: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    
+</body>
+</html>
