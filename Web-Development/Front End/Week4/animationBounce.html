@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce</title>
+    <style>
+        div{
+        height: 200px;
+        width: 200px;
+        position: relative;
+        top: 200px;
+        left: 500px;
+        background-color: cyan;
+        /* transition: all 1s ease-in-out; */
+        animation: bounce 1s linear 1;
+        /* animation-duration: 5s; */
+        
+        
+        }
+        /* div:hover{
+            transform: translatey(-200px);
+        } */
+        @keyframes bounce{
+            0%{
+                transform: translateY(0px);
+
+            }
+            30%{
+                transform: translateY(-100px);
+            }
+            50%{
+                transform: translateY(0px);
+            }
+            70%{
+                transform: translateY(-50px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+            /* 80%{
+                transform: translateY(-25px);
+
+            }
+            100%{
+                transform: translate(0px);
+            } */
+            
+
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        
+        
+    </div>
+    
+</body>
+</html>
