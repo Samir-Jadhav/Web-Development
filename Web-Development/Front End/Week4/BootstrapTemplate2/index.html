@@ -1,0 +1,218 @@
+<!-- 
+Problem
+Submissions
+Hints & solutions
+Doubts
+ CSS Assignment: Bootstrap Template 2
+Moderate
+Score
+0/240
+Average time to solve is 40m
+Problem statement
+Send feedback
+This is your second assignment for Bootstrap. Explore the 'Buttons', 'Dropdown', and 'Stretched Link' components on Bootstrap.
+
+Note
+
+The first div should contain the stretched link
+The second div should contain the dropend menu
+The third and fourth div should contain the Button
+You can add your styling to the button, dropend, and the stretched menu.
+
+
+Click here and scroll down to read more about dropend
+
+
+
+On a large screen and above, it looks like:-
+The first div should take 12 col and the rest should take 4 col
+
+no image
+
+
+On a medium screen and above, it looks like:-
+The first div should take 12 col and the rest should take 4 col
+
+
+no image
+
+
+On a small screen and above, it looks like -
+The first 2 div should take 12 col and the last 2 div should take 6 column
+
+
+no image
+
+
+On a small screen and below, it looks like -
+Each div should take 12 column
+
+
+no image
+
+Test Cases:
+
+1. Testing bootstrap components:
+
+a. Ensure that all the CDN links should be present before starting to code. 
+b. There should be a div with the class "row". Inside this div, all three responsive boxes div should be present. 
+c. Buttons inside the first responsive box div with a button tag should have a class containing "btn" of bootstrap. Add appropriate button classes according to the outputs shown above. 
+d. The second button tag inside the first box should have a "dropdown-toggle" class. 
+e. Inside this second button tag there should be a div containing the class "dropdown-menu" class. 
+f. The first anchor tag for the "More Details" link should contain the class name "stretched-link". 
+2. Testing Layout:
+
+a. All four responsive boxes div which are present inside the parent div with class name "row" 
+b. First responsive box div should contain the "col-md" class. 
+c. Second responsive box div should contain the "col-sm" class. 
+d. Third responsive box div should contain the "col-sm" class. 
+
+Note:-
+Add appropriate bootstrap classes according to the output images shown above. -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Bootstrap template 2</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="https://kit.fontawesome.com/822da35559.js" crossorigin="anonymous"></script>
+        <style>
+            .head{
+                font-size: 80px;
+                /* font-weight: 500; */
+                /* text-align: center; */
+                /* border: 2px solid black; */
+                
+            }
+            /* .divfirst{
+    
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+} */
+            /* .div1{
+  
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+} */
+
+
+.div2{
+    border: 4px solid red;
+    background-color:grey;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+
+}
+
+/* .div3{
+   
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+} */
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div style="background-image: linear-gradient(180deg, lightgrey, grey); width: 100vw; height:300px; " class="mb-3">
+                <div class="head pt-5 fw-bold text-center" >
+                    <span>
+                        Coding Ninjas
+                    </span>
+                    
+    
+
+                </div>
+                
+            </div>
+            <!-- place navbar here -->
+        </header>
+        <main>
+            <div class="container">
+            
+                <div class="row">
+                    <div class=" gap -3 d-flex align-center col-md-12 col-sm-12 col-xs-12 divfirst mb-5 shadow-lg p-3 mb-5 bg-body rounded">
+                        <div class="justify-center align-center me-5">
+                            <img style="height: 100px; width: 100px;" src="static/nlogo.webp">
+
+                        </div>
+                        <div class="containder flex-column">
+                            <div class="mb-3"><h5 class="fw-bold">What we have in store for you?</h5></div>
+                            <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, facilis molestiae fugit soluta repudiandae tenetur dicta, ab quis quam itaque qui veniam dignissimos totam non. Laboriosam necessitatibus sint veritatis, esse odit aperiam adipisci alias hic ratione, atque ducimus iure quas minus cumque! Ut adipisci neque hic veniam quos. Quia sunt quae sint ut totam corrupti earum debitis, pariatur vitae voluptate voluptates rerum aspernatur. Perspiciatis quaerat maxime tempore, cupiditate maiores sed illo aperiam eligendi dignissimos eos dolorem harum, quis commodi architecto repudiandae sunt consequuntur aliquam, natus est animi reiciendis odit. Neque quaerat libero adipisci quis ducimus necessitatibus suscipit quisquam blanditiis perspiciatis.</p></div>
+                            <div><a href="#" class="stretched-link text-decoration-none">More Details <i class="fa-solid fa-right-long"></i></a> </div>
+                            
+                            
+                        </div>
+                    
+                    </div>
+                    <div class="col-lg-3 div1 d-block m-5 text-primary col-sm-12 col-md-4 col-xs-12 shadow p-3 mb-5 bg-body rounded" ><p class="p-3">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi placeat cum voluptas eveniet numquam beatae temporibus deleniti nobis magnam ipsa, maiores enim sed delectus quos officiis ullam, eos quidem! Debitis maiores eius hic aspernatur ab recusandae nihil non necessitatibus quis. Unde voluptatum necessitatibus eum! Eligendi ratione neque magni. Assumenda numquam repellat dolore sunt atque itaque, officiis repellendus reprehenderit provident fugiat vel ipsum earum maxime nisi adipisci rem blanditiis illum pariatur placeat. Dolorem incidunt voluptatibus culpa fugiat! Deleniti totam, quia in rerum inventore amet sunt ipsam dolorum! Quasi, dolorum? Vero, maxime molestiae officiis reprehenderit vel similique doloribus! Vitae iusto nesciunt velit?
+                    </p>
+                    <div class="btn-group dropend"> 
+                        <button type="button" class="btn btn-danger" id="mydropdown">Details</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <span class="visually-hidden">Toggle dropdown</span>
+                        <div >
+                            <ul class="dropdown-menu" aria-labelledby="mydropdown">
+                                <li><a href="#" class="dropdown-item">Item-1</a></li>
+                                <li><a href="#" class="dropdown-item">Item-2</a></li>
+                                <li><a href="#" class="dropdown-item">Item-3</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+
+                </div>
+                    
+                    <div class="col-lg-3 div2 d-block m-5 col-sm-6 col-md-4 col-xs-12"><img src="static/asset.png"class="img-fluid">
+                        <div class="d-flex mt-5">
+
+                            <button type="button" class="btn btn-outline-light border mx-auto">Details</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 div3 d-block m-5 text-primary col-sm-6 col-md-4 col-xs-12 shadow p-3 mb-5 bg-body rounded">
+                        <p class="p-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, deserunt odit quam nihil nesciunt minima, assumenda facilis veniam ducimus et reiciendis, aliquam laboriosam ullam? Officia tempora nulla debitis reiciendis animi, sit dignissimos cum omnis necessitatibus voluptas veniam consequatur modi odit at voluptate, velit natus mollitia illum nemo dolor voluptatem architecto?
+                        </p>
+                        <div class="d-flex mt-5">
+
+                            <button class="btn btn-outline-secondary mx-auto">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
+
