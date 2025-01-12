@@ -1,29 +1,3 @@
-<!-- Problem statement
-This is your third assignment. The image that you see in the background is not repeated but actually, have a parallax effect.
-
-You have these new features to build on this page -
-
-There is a fixed navigation bar at the top of the page.
-Then, we have used carousel with two images.
-Look for 'Jumbotron' and 'Cards Layout' to build the below section.
-
-
-On a large screen and above, it looks like -
-no image
-
-
-On a medium screen and above, it looks like -
-no image
-
-
-On a small screen and above, it looks like -
-no image
-
-
-On a small screen and below, it looks like -
-no image -->
-
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -42,94 +16,134 @@ no image -->
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-
-        <style>
-            .search{
-                /* border: 2px red solid; */
-
-                margin-left: 1000px;
-            }
-        </style>
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
-             <nav class="navbar fixed-top navbar-expand-lg bg-transparent">
-                <div class="container-fluid ">
-
-                    <a href="#" class="navbar-brand ">
-                        <img src="static/nlogo.webp" alt="" height="50" width="50"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ">
-                              <li class="nav-item">
-                                <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link active text-secondary">Courses</a>
-                              </li>
-                              
-                            </ul>
-
-                            <div >
-                                
-                                <form class="search d-flex " >
-                                    <input type="search" class="form-control " placeholder="search" aria-label="search">
-                                    <button class="btn btn-light" type="submit">Search</button>
-                                </form>
-                            </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </nav>
-
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                <img src="static/slide1.jpg" class="d-block w-100" alt="first slide" >
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>First slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
-                                  </div>
-                        </div>
-                        <div class="carousel-item ">
-                                <img src="static/slide2.jpg" class="d-block w-100" alt=" second slide" >
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Second slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
-                                  </div>
-                        </div>
-                        <div class="carousel-item ">
-                                <img src="static/slide3.jpg" class="d-block w-100" alt="third slide" >
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Third slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
-                                  </div>
-                        </div>
-                        
-
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </a>
-                    <a href="#carouselExampleIndicators" class="carousel-control-next" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-
+            <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="static/nlogo.webp" width="35" height="35"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active fs-6" style="color: rgb(138, 142, 144);" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fs-6" style="color: rgb(138, 142, 144);" href="#">Features</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <form class="d-flex btn-group"  role="group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-light" type="submit">Search</button>
+                  </form>
                 </div>
+              </nav>
         </header>
-        <main></main>
+        <main>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="static/slide1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="static/slide2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="jumbotron mt-5">
+                <div class="container text-center bg-info p-2">
+                  <h1 class="mt-5 bg-secondary display-5 text-center pt-3 text-light" style="height: 100px;">Coding Ninjas</h1>
+                  <span class="text-light px-1 fs-2">Think, Create and Innovate. Thats the power of programming. Be a Ninja and build your own world </span>
+                  <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolor, reiciendis porro vel, sint culpa, neque labore similique obcaecati a maxime assumenda aut voluptatum. Repudiandae aperiam exercitationem inventore officiis quidem sunt quod enim id ad provident asperiores maiores, debitis perferendis esse laborum recusandae dignissimos tempora placeat dolores eveniet commodi distinctio expedita necessitatibus mollitia. Delectus sapiente, voluptas sunt temporibus earum et laboriosam explicabo tenetur similique quis, debitis saepe modi repellat corrupti. Pariatur vitae quae distinctio. Architecto eaque maxime voluptate aut numquam ratione sed a! Laudantium et blanditiis, quidem repellat nemo, deleniti quam consequuntur alias adipisci, est asperiores. Vel ut possimus fugit?</p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-12 my-5 d-flex justify-content-between ">
+                    <div class="card ">
+                  
+                      <div class="card-title text-center  ">
+                        <h3 class="text-center my-4">Web Development</h3>
+                        <p class="mx-3 my-3 text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, neque praesentium blanditiis facilis, commodi amet exercitationem veritatis voluptate eius vitae ipsam voluptas ut quos, hic laborum iure voluptatibus alias reprehenderit beatae sint. Et temporibus rerum saepe eveniet numquam. Pariatur est rerum magni facilis, totam at consequuntur reiciendis ut, nam accusantium quod laboriosam omnis odio itaque eius.</p>
+                        <button class="btn btn-primary ">Details</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12 my-5 d-flex justify-content-between">
+                    <div class="card ">
+                  
+                      <div class="card-title text-center  ">
+                        <h3 class="text-center my-4">Frontend Course</h3>
+                        <p class="mx-3 my-3 text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, neque praesentium blanditiis facilis, commodi amet exercitationem veritatis voluptate eius vitae ipsam voluptas ut quos, hic laborum iure voluptatibus alias reprehenderit beatae sint. Et temporibus rerum saepe eveniet numquam. Pariatur est rerum magni facilis, totam at consequuntur reiciendis ut, nam accusantium quod laboriosam omnis odio itaque eius.</p>
+                        <button class="btn btn-primary ">Details</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12 my-5  d-flex justify-content-between">
+                    <div class="card">
+                  
+                      <div class="card-title text-center  ">
+                        <h3 class="text-center my-4">Backend course</h3>
+                        <p class="mx-3 my-3 text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, neque praesentium blanditiis facilis, commodi amet exercitationem veritatis voluptate eius vitae ipsam voluptas ut quos, hic laborum iure voluptatibus alias reprehenderit beatae sint. Et temporibus rerum saepe eveniet numquam. Pariatur est rerum magni facilis, totam at consequuntur reiciendis ut, nam accusantium quod laboriosam omnis odio itaque eius.</p>
+                        <button class="btn btn-primary ">Details</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-12 my-5  d-flex justify-content-between">
+                    <div class="card">
+                  
+                      <div class="card-title text-center  ">
+                        <h3 class="text-center my-4">Backend course</h3>
+                        <p class="mx-3 my-3 text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, neque praesentium blanditiis facilis, commodi amet exercitationem veritatis voluptate eius vitae ipsam voluptas ut quos, hic laborum iure voluptatibus alias reprehenderit beatae sint. Et temporibus rerum saepe eveniet numquam. Pariatur est rerum magni facilis, totam at consequuntur reiciendis ut, nam accusantium quod laboriosam omnis odio itaque eius.</p>
+                        <button class="btn btn-primary ">Details</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                   <div class="col-lg-3 col-md-6 col-sm-12 my-5  d-flex justify-content-between">
+                    <div class="card">
+                  
+                      <div class="card-title text-center  ">
+                        <h3 class="text-center my-4">Backend course</h3>
+                        <p class="mx-3 my-3 text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, neque praesentium blanditiis facilis, commodi amet exercitationem veritatis voluptate eius vitae ipsam voluptas ut quos, hic laborum iure voluptatibus alias reprehenderit beatae sint. Et temporibus rerum saepe eveniet numquam. Pariatur est rerum magni facilis, totam at consequuntur reiciendis ut, nam accusantium quod laboriosam omnis odio itaque eius.</p>
+                        <button class="btn btn-primary ">Details</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
+            
+
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
