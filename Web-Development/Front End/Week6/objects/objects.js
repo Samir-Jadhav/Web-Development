@@ -28,8 +28,8 @@ var main = function () {
             age: 20,
             address: address
             }
-            }
             
+
     }
     function deleteRollNumber() {
       // Update this function to remove 'roll no' property from the student object (Step 3)
