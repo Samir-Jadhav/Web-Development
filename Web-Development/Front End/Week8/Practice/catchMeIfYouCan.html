@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Box</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .box {
+            position: absolute;
+            background: #b916f4;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.3s, top 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Catch Me</div>
+
+    <script>
+        const box = document.querySelector('.box');
+        
+        function updateBoxSize() {
+            let size = Math.min(window.innerWidth, window.innerHeight) * 0.2;
+            box.style.width = size + 'px';
+            box.style.height = size + 'px';
+        }
+
+        function moveBox() {
+            let maxX = window.innerWidth - box.clientWidth;
+            let maxY = window.innerHeight - box.clientHeight;
+            let newX = Math.random() * maxX;
+            let newY = Math.random() * maxY;
+            box.style.left = newX + 'px';
+            box.style.top = newY + 'px';
+        }
+
+        window.addEventListener('resize', updateBoxSize);
+        box.addEventListener('mouseenter', moveBox);
+        
+        updateBoxSize();
+        moveBox(); // Initial random position
+    </script>
+</body>
+</html>

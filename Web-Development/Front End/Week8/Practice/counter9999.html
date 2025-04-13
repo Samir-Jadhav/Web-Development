@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Up Counter</title>
+    <style>
+        body {
+            background-color: #D8F8FF;
+            font-family: sans-serif;
+            margin: 50px;
+        }
+        #counter-value {
+            padding: 40px 0;
+            margin: 50px 0;
+            background-image: linear-gradient(45deg, #A4F2F2, #EFA7D7);
+            text-align: center;
+        }
+        #counter-value p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 0.5rem;
+            word-spacing: 1rem;
+        }
+        #counter-container {
+            background-color: #555555;
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .counter {
+            display: inline-block;
+            background-color: aliceblue;
+            width: 20%;
+            max-width: 120px;
+            height: 80px;
+            margin: auto 10px;
+            box-shadow: 0px 0px 5px white;
+            position: relative;
+            overflow: hidden;
+        }
+        .counter p {
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            line-height: 80px;
+            border-top: 2px solid black;
+            background-color: aliceblue;
+        }
+        p.next {
+            position: absolute;
+            top: 80px;
+        }
+        p.animate {
+            transition-duration: 0.5s;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter-value">
+        <p>Enter a number to count up to:</p>
+        <input type="number" id="input-number" value="99999">
+        <button onclick="startCounter()">Start Counter</button>
+    </div>
+    <div id="counter-container">
+        <div class="counter" id="first">
+            <p class="current">0</p>
+            <p class="next">0</p>
+        </div>
+        <div class="counter" id="second">
+            <p class="current">0</p>
+            <p class="next">0</p>
+        </div>
+        <div class="counter" id="third">
+            <p class="current">0</p>
+            <p class="next">0</p>
+        </div>
+        <div class="counter" id="fourth">
+            <p class="current">0</p>
+            <p class="next">0</p>
+        </div>
+        <div class="counter" id="fifth">
+            <p class="current">0</p>
+            <p class="next">0</p>
+        </div>
+    </div>
+</body>
+<script>
+    var countInterval;
+    function startCounter() {
+        var counters = document.querySelectorAll(".counter");
+        var count = 0;
+        var maxCount = parseInt(document.getElementById("input-number").value);
+
+        resetNumbers(counters);
+        clearInterval(countInterval);
+        countInterval = setInterval(function () {
+            if (count >= maxCount) {
+                clearInterval(countInterval);
+                return;
+            }
+            increaseCount(counters, count);
+            count++;
+        }, 1000);
+    }
+
+    function resetNumbers(counters) {
+        counters.forEach(function (counter) {
+            var currentNo = counter.querySelector(".current");
+            var nextNo = counter.querySelector(".next");
+            currentNo.innerHTML = 0;
+            nextNo.innerHTML = 0;
+        });
+    }
+
+    function increaseCount(counters, count) {
+        var digits = count.toString().padStart(5, '0').split('');
+        counters.forEach(function (counter, index) {
+            var currentNo = counter.querySelector(".current");
+            var nextNo = counter.querySelector(".next");
+            nextNo.classList.add("animate");
+            currentNo.innerHTML = nextNo.innerHTML;
+            nextNo.classList.remove("animate");
+            nextNo.innerHTML = digits[index];
+        });
+    }
+</script>
+</html>

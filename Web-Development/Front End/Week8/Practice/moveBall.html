@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable Ball</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            background: white;
+            border: 2px solid black;
+        }
+        .ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: cyan;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+
+    <script>
+        const ball = document.querySelector('.ball');
+        const container = document.querySelector('.container');
+        let x = 100, y = 100; // Initial position
+        const step = 10;
+
+        function moveBall(event) {
+            if (event.key === 'w') y -= step;
+            if (event.key === 'a') x -= step;
+            if (event.key === 's') y += step;
+            if (event.key === 'd') x += step;
+            
+            // Keep ball inside container
+            x = Math.max(0, Math.min(x, container.clientWidth - 40));
+            y = Math.max(0, Math.min(y, container.clientHeight - 40));
+            
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+        }
+
+        document.addEventListener('keydown', moveBall);
+    </script>
+</body>
+</html>
